@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Secrets (bardzo wazne!)
+.env
+*.key
+*.pem
+
+# macOS
+.DS_Store
+
+# Tests
+.pytest_cache/
+.coverage
+*.csv

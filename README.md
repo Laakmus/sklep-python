@@ -57,6 +57,15 @@ Projekt pracuje na tabelach: `klienci`, `zamowienia`, `pozycje_zamowienia`, `pro
    ```
 3. Upewnij się, że masz uruchomione PostgreSQL na porcie `5433` z bazami `sklep` oraz `sklep_test`. Konfiguracja połączenia (host, port, user) znajduje się w `src/db.py` i `src/sqlalchemy_engine.py`.
 
+## Usage
+
+```bash
+python cli.py --city Krakow --min-id 1
+python cli.py --city Krakow --min-id 1 --columns imie email --limit 5
+python cli.py --city Krakow --min-id 1 --export krakow.csv
+python pandas_demo.py
+```
+
 ## Uruchamianie
 
 ### CLI — filtrowanie klientów

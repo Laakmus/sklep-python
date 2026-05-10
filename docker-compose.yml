@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: sklep
+      POSTGRES_USER: jaroslawurbanowicz
+      POSTGRES_PASSWORD: pass
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    depends_on:
+      - db
+    command: ["python", "cli.py", "--help"]
+
+volumes:
+  postgres_data:
